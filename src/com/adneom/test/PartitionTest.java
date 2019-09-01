@@ -18,26 +18,35 @@ public class PartitionTest {
 	
 	@Before
 	public void setUp() throws Exception {
+		//Give
 		list = Arrays.asList(1, 2, 3 , 4, 5);
 	}
 
 	@Test
 	public void partition_should_return_empty_list_when_list_null() {
+		//When list=null
+		//Then emptyList
 		assertEquals(Collections.emptyList(), PartitionUtils.partition(null, 1));
 	}
 	
 	@Test
 	public void partition_should_return_empty_list_when_list_empty() {
+		//When list is empty
+		//Then emptyList
 		assertEquals(Collections.emptyList(), PartitionUtils.partition(new ArrayList<>(), 1));
 	}
 	
 	@Test
 	public void partition_should_return_empty_list_when_taille_zero() {
+		//When taille is zero
+		//Then emptyList
 		assertEquals(Collections.emptyList(), PartitionUtils.partition(list, 0));
 	}
 	
 	@Test
 	public void partition_should_return_5element_list_when_taille_one() {
+		//When taille is 1
+		//Then [ [1], [2], [3], [4], [5] ]
 		List one = Arrays.asList(1);
 		List two = Arrays.asList(2);
 		List three = Arrays.asList(3);
@@ -49,6 +58,8 @@ public class PartitionTest {
 	
 	@Test
 	public void partition_should_return_3element_list_when_taille_two() {
+		//When taille is 2
+		//Then [ [1,2], [3,4], [5] ] 
 		List one = Arrays.asList(1, 2);
 		List two = Arrays.asList(3, 4);
 		List three = Arrays.asList(5);
@@ -58,6 +69,8 @@ public class PartitionTest {
 	
 	@Test
 	public void partition_should_return_2element_list_when_taille_three() {
+		//When taille is 3
+		//Then [ [1,2,3], [4,5] ] 
 		List one = Arrays.asList(1, 2, 3);
 		List two = Arrays.asList(4, 5);
 		List exp = Arrays.asList(one, two);
