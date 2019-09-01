@@ -47,12 +47,12 @@ public class PartitionTest {
 	public void partition_should_return_5element_list_when_taille_one() {
 		//When taille is 1
 		//Then [ [1], [2], [3], [4], [5] ]
-		List one = Arrays.asList(1);
-		List two = Arrays.asList(2);
-		List three = Arrays.asList(3);
-		List four = Arrays.asList(4);
-		List five = Arrays.asList(5);
-		List exp = Arrays.asList(one, two, three, four, five);
+		List<Integer> one = Arrays.asList(1);
+		List<Integer> two = Arrays.asList(2);
+		List<Integer> three = Arrays.asList(3);
+		List<Integer> four = Arrays.asList(4);
+		List<Integer> five = Arrays.asList(5);
+		List<List<Integer>> exp = Arrays.asList(one, two, three, four, five);
 		assertEquals(exp, PartitionUtils.partition(list, 1));
 	}
 	
@@ -60,10 +60,10 @@ public class PartitionTest {
 	public void partition_should_return_3element_list_when_taille_two() {
 		//When taille is 2
 		//Then [ [1,2], [3,4], [5] ] 
-		List one = Arrays.asList(1, 2);
-		List two = Arrays.asList(3, 4);
-		List three = Arrays.asList(5);
-		List exp = Arrays.asList(one, two, three);
+		List<Integer> one = Arrays.asList(1, 2);
+		List<Integer> two = Arrays.asList(3, 4);
+		List<Integer> three = Arrays.asList(5);
+		List<List<Integer>> exp = Arrays.asList(one, two, three);
 		assertEquals(exp, PartitionUtils.partition(list, 2));
 	}
 	
@@ -71,9 +71,9 @@ public class PartitionTest {
 	public void partition_should_return_2element_list_when_taille_three() {
 		//When taille is 3
 		//Then [ [1,2,3], [4,5] ] 
-		List one = Arrays.asList(1, 2, 3);
-		List two = Arrays.asList(4, 5);
-		List exp = Arrays.asList(one, two);
+		List<Integer> one = Arrays.asList(1, 2, 3);
+		List<Integer> two = Arrays.asList(4, 5);
+		List<List<Integer>> exp = Arrays.asList(one, two);
 		assertEquals(exp, PartitionUtils.partition(list, 3));
 	}
 
